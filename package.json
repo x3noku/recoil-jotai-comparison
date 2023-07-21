@@ -3,28 +3,36 @@
     "version": "1.0.0",
     "main": "index.js",
     "license": "MIT",
+    "repository": {
+        "url": "git+https://github.com/x3noku/recoil-jotai-comparison.git"
+    },
     "scripts": {
         "dev": "webpack serve --env port=3000",
         "build:prod": "webpack --env mode=production",
         "build:dev": "webpack --env mode=development",
         "lint": "eslint \"**/*.{ts,tsx}\"",
         "lint:fix": "eslint \"**/*.{ts,tsx}\" --fix",
-        "prepare": "husky install"
+        "prepare": "husky install",
+        "deploy": "gh-pages -d build"
     },
     "dependencies": {
         "ansi-styles": "^6.2.1",
+        "axios": "^1.4.0",
         "classnames": "^2.3.2",
         "i18next": "^22.5.0",
         "i18next-browser-languagedetector": "^7.0.2",
         "i18next-http-backend": "^2.2.1",
         "i18next-intervalplural-postprocessor": "^3.0.0",
+        "jotai": "^2.2.2",
         "loglevel": "^1.8.1",
         "loglevel-plugin-prefix": "^0.8.4",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
         "react-i18next": "^12.3.1",
         "react-router-dom": "^6.11.2",
-        "universal-cookie": "^4.0.4"
+        "recoil": "^0.7.7",
+        "universal-cookie": "^4.0.4",
+        "uuid": "^9.0.0"
     },
     "devDependencies": {
         "@svgr/webpack": "^8.0.1",
@@ -33,12 +41,14 @@
         "@types/node": "^20.2.5",
         "@types/react": "^18.2.7",
         "@types/react-dom": "^18.2.4",
+        "@types/uuid": "^9.0.2",
         "@types/webpack": "^5.28.1",
         "@types/webpack-bundle-analyzer": "^4.6.0",
         "@types/webpack-dev-server": "^4.7.2",
         "@typescript-eslint/eslint-plugin": "^5.59.8",
         "@typescript-eslint/parser": "^5.59.8",
         "autoprefixer": "^10.4.14",
+        "copy-webpack-plugin": "^11.0.0",
         "css-loader": "^6.8.1",
         "css-minimizer-webpack-plugin": "^5.0.0",
         "eslint": "^8.41.0",
@@ -54,6 +64,7 @@
         "eslint-plugin-react-hooks": "^4.6.0",
         "eslint-plugin-react-refresh": "^0.4.1",
         "file-loader": "^6.2.0",
+        "gh-pages": "^5.0.0",
         "html-webpack-plugin": "^5.5.1",
         "husky": "^8.0.0",
         "lint-staged": ">=10",
